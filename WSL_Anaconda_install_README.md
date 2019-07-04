@@ -51,7 +51,10 @@ conda list  했을때 설치 파일들이 나와야한다.
 `$ conda create -n <가상환경 이름> python=<버전정보>`
 e.g., `conda create -n swyoo python=3.6` 을 통해 python3.6 환경에서 작동하는 virtual environment를 구성할 수 있다. 
 
-`$ conda env remove -n <가상환경 이름> `
+`$ conda env remove -n <가상환경 이름> `  
+
+`$ conda remove -name <가상환경 이름> --all`
+
 가상환경을 지울수 있다. 
 
 `$conda activate <가상환경 이름>`
