@@ -15,7 +15,7 @@ print(python_version())
 print(tf.__version__)
 # path = os.getcwd() + '/Data/ml-1m'
 # os.path.join(<base directory>, <추가할 디렉토리 이름>)
-path = os.path.join(<base directory>, 'Data/ml-1m')
+path = os.path.join(os.getcwd(), 'Data/ml-1m')
 path
 ```
 
