@@ -11,3 +11,9 @@ $ byobu-config
 ### 바로가기 만들기 
 ln -s <경로>
 e.g., ln -s /mnt/c/Git
+
+
+
+## Tip
+
+ctrl + F6: session 강제종료
