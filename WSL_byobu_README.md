@@ -1,5 +1,8 @@
 # window 에서 unbuntu 사용하기 
 
+### 설치
+[설치 및 삭제 방법](https://www.howtoinstall.co/en/ubuntu/xenial/byobu?action=remove)
+
 ### byobu 사용
 [byobu 사용시 발생 문제 stack overflow](https://askubuntu.com/questions/492802/byobu-weird-character)
 ```shell
