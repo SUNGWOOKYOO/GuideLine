@@ -63,7 +63,7 @@ e.g., `conda create -n swyoo python=3.6` 을 통해 python3.6 환경에서 작�
 ### 가상환경 kernel 적용
 가상환경에서 ... [link](https://tech.songyunseop.com/post/2016/09/using-jupyter-inside-virtualenv/)
 `$ pip install ipykernel`  
-`$ python3 -m ipykernel install --user --name=<가상환경 이름>`  
+`$ python3 -m ipykernel install --user --name=<가상환경 이름>` # 명령어 한 줄로 kernel 등록
 `jupyter notebook` 접속
 Kernel> change kernel> <가상환경 이름>
 
