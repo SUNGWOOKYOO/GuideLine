@@ -62,30 +62,13 @@ python gcd.py 를 할때만 `__main__`  밑부분이 실행됨
 
 # Tip
 
-path join하는법
+### path join하는법
 
-os.path.join(<base directory>, <추가할 디렉토리 이름>)
+os.path.join(<base directory>, <추가할 디렉토리 이름>)  
 
-
-
-리눅스에서 프로그램 실행했을때 화면에 뿌려지는 결과를 파일로 저장하는건 " > "
-
-예를 들어 실행 파일명이 "hello" 이고, 저장하고 싶은 파일명이 result.txt 인 경우
-
-
-
-hello > result.txt 
-
-
-
-화면 보면서 파일로 저장하는건 " | tee "
-
-같은 예로,
-
-
-
-hello | tee result.txt
-
-
-
-출처: https://bumsei.tistory.com/381 [One step forward]
+### 리눅스 실행결과를 파일로 저장 
+리눅스에서 프로그램 실행했을때 화면에 뿌려지는 결과를 파일로 저장하는건 " > "  
+예를 들어 실행 파일명이 `hello.py` 이고, 저장하고 싶은 파일명이 result.txt 인 경우  
+`$ python hello.py > result.txt `  
+화면 보면서 파일로 저장하는건 `$ python hello.py | tee result.txt`    
+[출처](https://bumsei.tistory.com/381)
