@@ -21,4 +21,9 @@ e.g., ln -s /mnt/c/Git
 ctrl + s 누르면 화면이 멈추는데 ctrl + q 를 누르면 풀림  
 F6 누르면 byobu 나감  
 ctrl + F7 누르면 위로 커서 올려서 볼 수 있음  
-ctrl + F6: session 강제종료  
+ctrl + F6: session 강제종료    
+
+[byobu session 다루기](https://askubuntu.com/questions/196290/name-a-byobu-session)
+
+`$ byobu list-session`
+
