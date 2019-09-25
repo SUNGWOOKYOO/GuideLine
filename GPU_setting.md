@@ -3,6 +3,16 @@
 
 [연구실 guide](http://kdd.snu.ac.kr/wiki/index.php/GUIDE:GPU)
 
+
+
+### 상식
+
+GPU를 돌리기에 앞서 나의 gpu 머신이 어떤 graphic driver와 호환되는지 알아야한다. 
+
+graphic driver는 cuda기반 programming으로 돌아가기 때문에, graph driver와 호환이 맞는 cuda, cudnn 등을 깔아야하며, tensorflow-gpu 역시 
+
+
+
 ### cuda
 [버전에 맞는게 뭔지 확인](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux)
 sudo apt-get update

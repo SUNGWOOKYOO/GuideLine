@@ -33,6 +33,8 @@ path
 
    `...` = `/home/swyoo/.jupyter/jupyter_notebook_config.py`
 
+   rf. 연구실 컴퓨터의 경우 /home/kddlab/.jupyter/jupyter_notebook_config.py
+
 2. ipython으로 비밀번호 설정
 
    ```python
@@ -47,15 +49,47 @@ path
 
 3. 패스워드를 config하기 
 
-   ```python
+   ```shell
    $ vi /your/dir/for/jupyter_notebook_config.py
    
+   # 따옴표 ' '를 꼭 붙이기!  
    c.NotebookApp.ip = '내 ip'
    c.NotebookApp.password=u'sha1:....' 
    c.NotebookApp.open_browser = False #원래 True
+   
+   # 만약 원격 연결이 안된다면 외부 허용, 포트번호 바꿔보기
+   c.NotebookApp.allow_origin = '*'
+   c.NotebookApp.port = '사용할 포트번호 네자리를 입력해주세요, 초기값은 8888 입니다.'
    ```
 
 4. `$ jupyter notebook ` 실행
+
+###  jupyter notebook 또는 lab을 background[^1 ]로 돌리기
+
+#### prerequsite: port가 설정되어있어야 `&` 를 통해 자동으로 port할당할 수 있다.  
+
+```shell
+# jupyter notebook을 background로...
+$ jupyter notebook& 
+# jupyter lab을 background로...
+$ jupyter lab&
+
+# 만약, background로 실행하면 종료가 되지 않기 때문에 따로 PID를 찾아 종료해 주어야한다.
+# 현재 실행중인 jupyter notebook들 보기
+$ jupyter notebook list
+# 현재 실행중인 PID list
+$ netstat -tulpn
+# PID/Program name에서 <PID>에 해당하는 부분을 다음 명령어를 통해 kill 
+$ kill <PID> 
+```
+
+
+
+[^1]: background 로 돌린다는 것은 평소대로라면 terminal이 종료될때 jupyter notebook은 종료되게 된다. terminal의 종료 유무와 상관없이 jupyter notebook 또는 lab이 동작하도록 하는것을 background로 실행하는것이다.  단, 이렇게 실행하면 jupyter notebook을 종료하는게 까다롭게 된다. 
+
+ 
+
+
 
 ### Tip 
 
