@@ -89,6 +89,22 @@ $ kill <PID>
 
  
 
+###  anaconda로 설치한 가상 환경 jupyter notebook kernel에 추가하기
+[link](https://data-newbie.tistory.com/113)
+
+```shell
+# kernel을 만들기위한 module
+$ pip install ipykernel
+
+# conda 의 가상환경이름이 virtualEnv이며, kernel 선택화면에서 보일 이름이 [displayKernelName]
+python -m ipykernel install --user --name [virtualEnv] --display-name [displayKernelName]
+# e.g
+# python -m ipykernel install --user --name env --display-name swyoo
+
+# 주피터에 뜨는 커널 지우기
+$ jupyter kernelspec uninstall yourKernel
+```
+
 
 
 ### Tip 
