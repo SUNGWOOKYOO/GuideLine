@@ -5,5 +5,3 @@ Latex 문법을 정리해 놓은 wikipedia [link](https://en.wikipedia.org/wiki/
 
 
 자주 사용하는 것들을 정리해 놓았다.
-
-# 
