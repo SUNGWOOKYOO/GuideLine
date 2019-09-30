@@ -33,3 +33,10 @@ $ source ~/.bashrc
 $ pycharm 
 ```
 
+
+
+### 바로가기 만들기
+```shell
+ln -s [path]
+```
+
