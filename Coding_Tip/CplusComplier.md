@@ -19,7 +19,19 @@ $ ./a.out
 # include <limits.h> // INT_MAX 등이 정의됨 
 # include <algorithm> // reduce_shuffle() 등이 정의
 # include <math.h> // floor() 등이 정의
+# include <string.h> // memcpy 등이 정의
 ```
+
+
+
+### Replace
+```c++
+// 만약 밑의 함수가 쓰였다면, 
+_msize(...) 
+// 다음과 같은 함수로 replace한다.
+sizeof(...)
+```
+
 
 
 
