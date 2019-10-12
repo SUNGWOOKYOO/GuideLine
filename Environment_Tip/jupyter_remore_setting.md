@@ -33,7 +33,7 @@ path
 
    `...` = `/home/swyoo/.jupyter/jupyter_notebook_config.py`
 
-   rf. 연구실 컴퓨터의 경우 /home/kddlab/.jupyter/jupyter_notebook_config.py
+   rf. 연구실 컴퓨터의 경우 `/home/kddlab/.jupyter/jupyter_notebook_config.py`
 
 2. ipython으로 비밀번호 설정
 
@@ -50,7 +50,7 @@ path
 3. 패스워드를 config하기 
 
    ```shell
-   $ vi /your/dir/for/jupyter_notebook_config.py
+   $ gedit /home/username/.jupyter/jupyter_notebook_config.py
    
    # 따옴표 ' '를 꼭 붙이기!  
    c.NotebookApp.ip = '내 ip'

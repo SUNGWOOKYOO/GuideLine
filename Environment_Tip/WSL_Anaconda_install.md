@@ -37,7 +37,7 @@ $ source ~/.bashrc
 `$ conda --version`
 path를 잡지 못한다면, path 설정을 `vim ~/.bashrc` 에 가서 해주고, `source ~/.bashrc` 를 통해 적용을 한다. 
 
-~/.bashrc 파일 안에 `export PATH="/home/swyoo/anaconda3/bin``:$PATH"`를 덭붙혀 준다.
+~/.bashrc 파일 안에 `export PATH="/home/swyoo/anaconda3/bin:$PATH"`를 덭붙혀 준다.
 
 `$ which python` 했을떄, 
 `/home/swyoo/anaconda3/bin/python` 이렇게 나와야하며, 
