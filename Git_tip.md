@@ -14,3 +14,17 @@ $ git clean -fd --dry -run
 $ git clean -fd 
 ```
 
+
+
+### 현재 branch를 master branch로 바꾸기 [link](http://egloos.zum.com/YSocks/v/511600)
+
+```shell
+# current branch list
+# * master
+# * branch
+git checkout branch 
+git merge --strategy=ours master
+git checkout master
+git merge branch 
+```
+
