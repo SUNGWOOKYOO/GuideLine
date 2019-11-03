@@ -64,3 +64,9 @@ xming이라는 프로그램과 putty를 이용하여 GUI를 원격으로 구동�
 
  Xming을 설치 후에, putty의 Configuration> Connection>  SSH > X11 에서 X11 forwarding에 체크를 해주면 사용가능 한 것 같다.
 
+
+
+### Putty 에서 F1, F2, .. . 등이 작동이 안될때
+
+Change Setting > Keyboard > VT100+ 를 선택하여 사용한다. [link](https://ttend.tistory.com/274)
+
