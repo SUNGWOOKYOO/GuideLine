@@ -68,5 +68,5 @@ xming이라는 프로그램과 putty를 이용하여 GUI를 원격으로 구동�
 
 ### Putty 에서 F1, F2, .. . 등이 작동이 안될때
 
-Change Setting > Keyboard > VT100+ 를 선택하여 사용한다. [link](https://ttend.tistory.com/274)
+Change Setting > Keyboard > xterm R6 를 선택하여 사용한다. [link](https://ttend.tistory.com/274)
 
