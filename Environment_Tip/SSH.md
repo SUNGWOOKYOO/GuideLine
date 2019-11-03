@@ -70,3 +70,12 @@ xming이라는 프로그램과 putty를 이용하여 GUI를 원격으로 구동�
 
 Change Setting > Keyboard > xterm R6 를 선택하여 사용한다. [link](https://ttend.tistory.com/274)
 
+
+
+###  SSH 다른 포트 추가하기
+
+openssh server를 구동시킬때 방화벽에 의해 22번 포트가 막혀있을 수 있다.
+
+따라서,  원격 접속 시 방화벽이 동작하지않는 다른 포트를 열어줄 필요가 있을 때 사용 가능 하다.
+
+[zeta wiki]([https://zetawiki.com/wiki/SSH_%ED%8F%AC%ED%8A%B8_%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0](https://zetawiki.com/wiki/SSH_포트_추가하기))
