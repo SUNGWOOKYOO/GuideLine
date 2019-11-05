@@ -78,4 +78,24 @@ openssh server를 구동시킬때 방화벽에 의해 22번 포트가 막혀있�
 
 따라서,  원격 접속 시 방화벽이 동작하지않는 다른 포트를 열어줄 필요가 있을 때 사용 가능 하다.
 
-[zeta wiki]([https://zetawiki.com/wiki/SSH_%ED%8F%AC%ED%8A%B8_%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0](https://zetawiki.com/wiki/SSH_포트_추가하기))
+[zeta wiki](https://zetawiki.com/wiki/SSH_%ED%8F%AC%ED%8A%B8_%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
+
+```shell
+# 외부 포트도 열어주기
+$ gedit /etc/ssh/sshd_config
+"""
+Port 22 
+Port 9999 # 9999 포트 추가
+"""
+
+# 9999 port 방화벽 허용 
+$ sudo ufw allow 9999
+```
+
+sudo ufw allow 22
+
+
+
+147.46.245.101:9542
+
+125.191.6.186:22
