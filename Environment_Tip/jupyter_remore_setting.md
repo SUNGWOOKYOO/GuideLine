@@ -101,6 +101,9 @@ python -m ipykernel install --user --name [virtualEnv] --display-name [displayKe
 # e.g
 # python -m ipykernel install --user --name env --display-name swyoo
 
+# 주피터 커널 리스트 보기
+$ jupyter kernelspec list
+
 # 주피터에 뜨는 커널 지우기
 $ jupyter kernelspec uninstall yourKernel
 ```
