@@ -29,7 +29,6 @@ Do you wish to proceed with the installation of Microsoft VSCode? [yes|no]>>>	no
 
 설치 활성화 
 $ source ~/.bashrc
-
 ```
 
 

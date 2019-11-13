@@ -72,6 +72,7 @@ Change Setting > Keyboard > xterm R6 를 선택하여 사용한다. [link](https
 
 
 
+<<<<<<< HEAD
 ###  SSH 다른 포트 추가하기
 
 openssh server를 구동시킬때 방화벽에 의해 22번 포트가 막혀있을 수 있다.
@@ -99,3 +100,5 @@ sudo ufw allow 22
 147.46.245.101:9542
 
 125.191.6.186:22
+=======
+>>>>>>> be4e02d1d75c303594177ab68e4c1dd8da0071f6
