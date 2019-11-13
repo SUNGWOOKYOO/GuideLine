@@ -109,4 +109,70 @@ $ cuda10
 
 # Install NVIDA Driver
 
+보통은 CUDA를 설치하면 자동으로 설치된다.
+
 [NVIDA Driver](https://www.nvidia.com/Download/index.aspx) 에서 수동으로 다운로드 받을 수 있다.
+
+
+
+
+
+
+
+### Install CUDNN
+
+[version download link](https://developer.nvidia.com/rdp/cudnn-archive) 에 들어가면 버전별로 설치 파일들이 나열되어 있다.
+
+설치하는 방법은 다음과 같이 3가지가 있다.
+
+1. `*.tgz` file을 이용한 방법 [cuDNN Library for Linux]
+2. `*.deb` 파일을 이용한 방법 [Deb]
+3.  이 외의 방법[RPM]
+
+수동으로 설치하는 것이 더 쉬울 수 있어 `*.tgz` 파일을 압축 해제한뒤 cuda 의 path부분에 복사해 넣는 방식인 첫번째 방식을 택해 설치 하였다.
+
+[official guide](https://docs.nvidia.com/deeplearning/sdk/pdf/cuDNN-Installation-Guide.pdf) 에서 **2.3.1. Installing From A Tar File** 부분을 보고 설치하였다.
+
+먼저 `*.tgz` 파일을 현재 디렉토리 (보통은` ~/Download`)에 다운로드 받고 압축을 해제한다.
+
+```shell
+# prerequsite: download cudnn-10.0-*.tgz 
+$ cd ~/Download
+# unpack this file.
+$ tar -xzvf cudnn-10.0-*.tgz
+# then, being generated './cuda' folder
+
+# prerequite: should be exist '/usr/local/cuda<version>' path 
+# copy some files to [cuda path]/[proper places]
+$ sudo cp cuda/include/cudnn.h /usr/local/cuda<version>/include
+$ sudo cp cuda/lib64/libcudnn* /usr/local/cuda<version>/lib64
+$ sudo chmod a+r /usr/local/cuda<version>/include/cudnn.h /usr/local/cuda<version>/lib64/
+libcudnn*
+
+# e.g 
+$ sudo cp cuda/include/cudnn.h /usr/local/cuda-10.0/include
+$ sudo cp cuda/lib64/libcudnn* /usr/local/cuda-10.0/lib64
+$ sudo chmod a+r /usr/local/cuda-10.0/include/cudnn.h /usr/local/cuda-10.0/lib64/
+libcudnn*
+
+# reboot 
+$ sudo reboot 
+```
+
+
+
+```shell
+# version check
+$ cat /usr/local/cuda<version>/include/cudnn.h | grep CUDNN_MAJOR -A 2
+# e.g 
+$ cat /usr/local/cuda-10.0/include/cudnn.h | grep CUDNN_MAJOR -A 2
+```
+
+ 
+
+## tensorflow error
+
+cudnn version 호환이 tensorflow-gpu 와 맞지 않은경우, 중간에 kernel이 die되거나
+
+cudnn 관련 error발생한다.
+

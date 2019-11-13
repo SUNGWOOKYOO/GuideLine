@@ -40,3 +40,20 @@ $ pycharm
 ln -s [path]
 ```
 
+
+
+### sudo apt-get update 에러시
+
+다음과 같은 명령어를 한 후, 다시 시도해본다. [stack overflow](https://askubuntu.com/questions/760574/sudo-apt-get-update-failes-due-to-hash-sum-mismatch)
+
+```shell
+$ sudo apt-get clean
+$ sudo rm -r /var/lib/apt/lists/*
+```
+
+ update, upgrade, autoremove 를 번갈아 가면서 하다보면 해결되는 경우가 많다.
+
+```shell
+$ sudo apt-get update
+```
+
