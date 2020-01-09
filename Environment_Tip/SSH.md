@@ -95,3 +95,14 @@ $ sudo ufw allow 9999
 sudo ufw allow 22
 
 
+
+### Linux에서 ssh 를 통해 원격 로그인하기
+
+`ssh -p [포트번호] [로그인이름]@[host ip]`
+
+```shell
+# 지정된 포트를 통해 연결
+# 접속 후 비밀번호도 입력
+$ ssh -p 10022 kddlab@147.46.244.243
+```
+
