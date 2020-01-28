@@ -11,7 +11,7 @@ GPU를 돌리기에 앞서 나의 gpu 머신이 어떤 graphic driver와 호환�
 
 graphic driver는 cuda기반 programming으로 돌아가기 때문에, graph driver와 호환이 맞는 cuda, cudnn 등을 깔아야하며, tensorflow-gpu역시 호환이 맞아야한다.
 
-다음과 같이 구글에 검색하여 참조한다. []
+다음과 같이 구글에 검색하여 참조한다. 
 
 ```shell
 # google search keyword 
@@ -39,11 +39,37 @@ cuda toolkit 10.0
 $ sudo dpkg -i cuda-repo-ubuntu1604-10-0-local-10.0.130-410.48_1.0-1_amd64.deb
 # Instruction에서 <version>을 대체한 부분으로 /var/[tab] 을 통해 확인후 복사 붙여넣기.
 $ sudo apt-key add /var/cuda-repo-10-0-local-10.0.130-410.48/7fa2af80.pub
+# OK 뜬다면 성공
 $ sudo apt-get update
+# 지정해서 설치하고싶을땐 cuda=<version> 여기서 <version>은  Tab 누르면 알수있다,
+# e.g, sudo apt-get install cuda=10.1.105-1 
 $ sudo apt-get install cuda
 # 설치후 확인
 $ nvcc --version 
 ```
+
+<font color=red> Warning: </font> Other installation options are available in the form of meta-packages. For example, to install all the library packages, replace "cuda" with the "cuda-libraries-10-1" meta package. For more information on all the available meta packages click [here](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-metas).
+
+
+
+`nvcc --version` 이 잘 동작하지 않을 경우 
+
+`~/.bashrc` 를 편집하여 path를 잡게 하면된다.
+
+```shell
+#################################################################
+# ~/.bashrc 내부 ...
+#################################################################
+export PATH=/usr/local/cuda-<version>/bin${PATH:+:${PATH}}
+
+# example
+export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+#################################################################
+# 파일에서 나와서
+$ source ~/.bashrc
+```
+
+
 
 CUDA를 설치하면서 CUDA 버전에 맞는 NVIDIA Driver가 기존 드라이버에서 업그레이드 될 수 있는데,  
 
@@ -111,11 +137,23 @@ $ cuda10
 
 보통은 CUDA를 설치하면 자동으로 설치된다.
 
-[NVIDA Driver](https://www.nvidia.com/Download/index.aspx) 에서 수동으로 다운로드 받을 수 있다.
+[NVIDA Driver](https://www.nvidia.com/Download/index.aspx) 에서 직접 다운로드 받아 설치할 수 있다.
 
+[한글 블로그 설명](https://codechacha.com/ko/install-nvidia-driver-ubuntu/) 에서 자세한 방법을 볼 수 있다.
 
+크게 2가지 방법존재. 
 
+### 
 
+```shell
+# Display Manager stop
+$ systemctl isolate multi-user.target
+$ sudo service lightdm stop 
+
+# Display Manager start
+$ systemctl start multi-user.target
+$ sudo service lightdm start 
+```
 
 
 
@@ -176,3 +214,52 @@ cudnn version 호환이 tensorflow-gpu 와 맞지 않은경우, 중간에 kernel
 
 cudnn 관련 error발생한다.
 
+
+
+
+
+### Path 잡기
+
+```shell
+# vi ~/.bashrc
+export CUDA_HOME=/usr/local/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+```
+
+
+
+# Uninstall CUDA & CuDNN
+
+### PRE-INSTALLATION ACTIONS
+
+기존에 설치되어 있는 것들을 제거하는 과정. 설치되어 있는가를 확인하려면
+
+```shell
+$ apt list --installed | grep nvidia
+$ apt list --installed | grep cuda
+```
+
+제거하는 명령어:
+
+```shell
+$ sudo apt-get --purge remove '^cuda.*'
+$ sudo apt-get --purge remove '^nvidia.*'
+$ sudo apt-get --purge remove '^libcudnn7.*'
+$ sudo apt-get --purge remove '^libnvidia-.*'
+```
+
+apt로 설치되지 않는 것들	은 다음과 같이 제거해야 한다.
+
+```shell
+$ sudo /usr/local/cuda/bin/uninstall_cuda_X.Y.pl
+$ sudo /usr/bin/nvidia-uninstall
+```
+
+마지막으로 제대로 제거되었는지 확인한다
+
+```shell
+$ ls -d /usr/local/cuda*
+```
+
+제거되지 않았으면 제거한다.

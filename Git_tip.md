@@ -99,3 +99,11 @@ $ git branch -a
 $ git checkout -t origin/exp
 ```
 
+
+
+### 원격 저장소 특정 브랜치만 지우기
+
+```shell
+$ git push <remote_name> --delete <branch_name>
+```
+

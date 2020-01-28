@@ -106,3 +106,10 @@ sudo ufw allow 22
 $ ssh -p 10022 kddlab@147.46.244.243
 ```
 
+
+
+### ssh 재시작
+
+```shell
+$ sudo service ssh restart
+```

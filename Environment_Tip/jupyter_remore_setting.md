@@ -110,6 +110,26 @@ $ jupyter kernelspec uninstall yourKernel
 
 
 
+<font color=red> Note that </font> `!type python`을 해도 주피터 노트북 상에서는 base에 대한 python 을 보여준다. 하지만 제대로 동작함을 확인할 수 있다.
+
+
+
+### 가상환경 추출
+: 모든 세팅이 되어 있는 가상환경을 다른 머신으로 복사하고 싶을 때 사용하면 된다. 아래 명령어는 현재 환경을 *environment.yml* 파일로 저장한다.
+
+```shell
+$ conda env export --name YOUR_ENV_NAME > environment.yml
+```
+
+### 추출한 가상환경으로 새로운 가상환경 생성
+: 앞서 추출한 *environment.yml* 로 가상환경을 생성한다. 설치되어 있던 모든 패키지가 자동으로 설치된다.
+
+```shell
+$ conda env create -f ./environment.ym
+```
+
+
+
 ### Tip 
 
 vi editor에서 원하는 text 찾을때, 명령어 모드에서  

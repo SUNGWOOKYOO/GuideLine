@@ -6,7 +6,7 @@ first date: 2019-07-03
 blog를 보고 설치하면 된다.
 요약 
 ```shell
-다운로드 
+#다운로드, offical 홈페이지에서 다운로드 받는것이 좋다.
 $ curl -O https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh 
 ## 로그 생략 
 $ ls -al
