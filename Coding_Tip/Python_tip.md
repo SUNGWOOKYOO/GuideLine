@@ -72,3 +72,10 @@ os.path.join(<base directory>, <추가할 디렉토리 이름>)
 `$ python hello.py > result.txt `  
 화면 보면서 파일로 저장하는건 `$ python hello.py | tee result.txt`    
 [출처](https://bumsei.tistory.com/381)
+
+
+
+### python 의 asterisk * 사용
+
+[korean blog](https://mingrammer.com/understanding-the-asterisk-of-python/)
+
