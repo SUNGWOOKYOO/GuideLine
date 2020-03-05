@@ -6,10 +6,9 @@
 
 janus: 자주 사용되는 편한 설정을 쉽게 적용할 수 있는 패키지 (https://github.com/carlhuda/janus)
 
-```
-sudo apt-get install vim git rake curl -y
-
-curl -L https://bit.ly/janus-bootstrap | bash
+```shell
+$ sudo apt-get install vim git rake curl -y
+$ curl -L https://bit.ly/janus-bootstrap | bash
 ```
 
 이것만 하면 다른 설정 없이도 어느 정도 사용 가능
@@ -47,6 +46,6 @@ set cursorline
 
 VIM에는 플러그인을 추가하여 더 편리한 텍스트 편집환경을 구축할 수 있다. 먼저 Vundle이라는 플러그인 관리자를 설치해서 플러그인 추가를 자유롭게 할 수 있도록 세팅을 할 수 있다. [설치가이드](https://github.com/VundleVim/Vundle.Vim#quick-start)
 
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```shell
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
