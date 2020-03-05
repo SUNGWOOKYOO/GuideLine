@@ -117,6 +117,11 @@ $ sudo du -sh *
 $ curl -o train-v1.1.json https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v1.1.json
 ```
 
+```shell
+# another exmaple
+$ wget [url]
+```
+
 
 
 ## 외장 하드 마운트 시키기 

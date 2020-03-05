@@ -25,6 +25,21 @@ e.g. $ byobu new -s swyoo
 ln -s <경로>
 e.g., ln -s /mnt/c/Git
 
+
+
+### [Avoid the problem which cannot attach after detach.](https://www.hiroom2.com/2018/08/25/alpinelinux-3-8-byobu-en/#sec-2)
+
+```shell
+# 에러상황
+$ byobu
+/usr/bin/byobu-select-session: exec: line 24:
+/usr/lib/byobu/include/select-session.py: not found
+```
+
+
+
+
+
 ## Tip
 ctrl + s 누르면 화면이 멈추는데 ctrl + q 를 누르면 풀림  
 ctrl + d 누르면 현재 보고있는 byobu 화면 하나를 닫는다.

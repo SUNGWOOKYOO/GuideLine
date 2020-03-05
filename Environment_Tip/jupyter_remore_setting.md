@@ -93,6 +93,7 @@ $ kill <PID>
 [link](https://data-newbie.tistory.com/113)
 
 ```shell
+# base와 anaconda env 두 환경에 모두 ipykernel 설치해야한다.
 # kernel을 만들기위한 module
 $ pip install ipykernel
 

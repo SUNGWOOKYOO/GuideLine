@@ -27,8 +27,6 @@ $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
-
-
 # SSH 연결하기
 
 ```shell
@@ -93,6 +91,8 @@ $ sudo ufw allow 9999
 ```
 
 sudo ufw allow 22
+
+[ufw 사용법 korean blog](https://webdir.tistory.com/206)
 
 
 
